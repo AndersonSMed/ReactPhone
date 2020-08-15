@@ -10,7 +10,7 @@ const Container = styled.div`
 
 export const Dialer = () => (
   <Container>
-    <Input fontSize="24px" width="100%" centered uppercase rounded />
+    <Input fontSize="24px" width="100%" centered uppercase />
     <Divider />
     <Dialpad fontSize="24px" spacing="8px" />
   </Container>

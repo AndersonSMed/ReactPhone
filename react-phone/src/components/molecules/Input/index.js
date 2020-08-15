@@ -8,7 +8,7 @@ const StyledInput = styled.input`
   color: #424242;
   padding: 8px 16px;
   box-sizing: border-box;
-  border-radius: ${({rounded}) => rounded ? '4px' : 'unset'};
+  border-radius: 4px;
   width: ${({width}) => width || 'unset'};
   text-align: ${({centered}) => centered ? 'center' : 'unset'};
   text-transform: ${({uppercase}) => uppercase ? 'uppercase' : 'unset'};
@@ -18,7 +18,6 @@ const StyledInput = styled.input`
 export const Input = ({
   centered,
   uppercase,
-  rounded,
   width,
   fontSize,
   ...props
@@ -27,7 +26,6 @@ export const Input = ({
     type="text"
     centered={centered}
     uppercase={uppercase}
-    rounded={rounded}
     width={width}
     fontSize={fontSize}
     {...props}
@@ -37,7 +35,6 @@ export const Input = ({
 Input.propTypes = {
   centered: PropTypes.bool,
   uppercase: PropTypes.bool,
-  rounded: PropTypes.bool,
   width: PropTypes.string,
   fontSize: PropTypes.string,
 };
