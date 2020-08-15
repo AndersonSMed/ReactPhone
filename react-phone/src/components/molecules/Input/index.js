@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const StyledInput = styled.input`
   all: unset;
-  background: #f5f5f5;
-  color: #616161;
+  background: #e0e0e0;
+  color: #424242;
   padding: 8px 16px;
   box-sizing: border-box;
   border-radius: ${({rounded}) => rounded ? '4px' : 'unset'};

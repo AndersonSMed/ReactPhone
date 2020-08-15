@@ -1,11 +1,17 @@
 import React from 'react';
-import './index.css';
+import styled from 'styled-components';
 import {Dialer} from '../pages/Dialer';
+import './index.css';
 
-const App = (props) => (
-  <div>
+const Container = styled.div`
+  background: #fefefe;
+  width: 350px;
+`;
+
+const App = () => (
+  <Container>
     <Dialer />
-  </div>
+  </Container>
 );
 
 export default App;

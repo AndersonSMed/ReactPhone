@@ -6,8 +6,8 @@ const StyledButton = styled.button`
   all: unset;
   min-width: 64px;
   min-height: 64px;
-  color: #616161;
-  background: ${({background}) => background ? background : '#f5f5f5'};
+  color: #424242;
+  background: ${({background}) => background ? background : '#e0e0e0'};
   border-radius: ${({circle}) => circle ? '50%' : '2px'};
   cursor: pointer;
   display: flex;

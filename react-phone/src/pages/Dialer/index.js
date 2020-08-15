@@ -5,7 +5,6 @@ import {Input} from '../../components/molecules/Input';
 import {Divider} from '../../components/molecules/Divider';
 
 const Container = styled.div`
-  width: 350px;
   padding: 16px;
 `;
 
