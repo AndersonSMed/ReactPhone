@@ -30,7 +30,10 @@ export const Button = ({children, background, circle, ...props}) => (
 );
 
 Button.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
   background: PropTypes.string,
   circle: PropTypes.bool,
 };
