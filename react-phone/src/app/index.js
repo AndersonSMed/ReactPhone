@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.css';
-import {Dialpad} from '../components/organisms/Dialpad';
+import {Dialer} from '../pages/Dialer';
 
 const App = (props) => (
   <div>
-    <Dialpad />
+    <Dialer />
   </div>
 );
 

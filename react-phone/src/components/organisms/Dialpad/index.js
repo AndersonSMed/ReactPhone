@@ -1,12 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {Button} from '../../molecules/Button';
 import {Icon} from '../../molecules/Icon';
-
-const Container = styled.div`
-  width: 250px;
-  font-size: 24px;
-`;
 
 const Row = styled.div`
   width: 100%;
@@ -16,9 +12,17 @@ const Row = styled.div`
   box-sizing: border-box;
 `;
 
-export const Dialpad = (props) => {
+const Container = styled.div`
+  font-size: ${({fontSize}) => fontSize || '1em'};
+
+  & > ${Row}:not(:last-child) {
+    margin-bottom: ${({spacing}) => spacing || 'unset'};
+  };
+`;
+
+export const Dialpad = ({fontSize, spacing}) => {
   return (
-    <Container>
+    <Container fontSize={fontSize} spacing={spacing}>
       <Row>
         <Button circle>1</Button>
         <Button circle>2</Button>
@@ -35,9 +39,9 @@ export const Dialpad = (props) => {
         <Button circle>9</Button>
       </Row>
       <Row>
-        <Button circle>#</Button>
-        <Button circle>0</Button>
         <Button circle>*</Button>
+        <Button circle>0</Button>
+        <Button circle>#</Button>
       </Row>
       <Row>
         <Button background="#7acc8f" circle>
@@ -46,4 +50,9 @@ export const Dialpad = (props) => {
       </Row>
     </Container>
   );
+};
+
+Dialpad.propTypes = {
+  fontSize: PropTypes.string,
+  spacing: PropTypes.string,
 };

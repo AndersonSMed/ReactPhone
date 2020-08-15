@@ -23,17 +23,14 @@ const StyledButton = styled.button`
   }
 `;
 
-export const Button = ({children, background, circle, onClick}) => {
-  return (
-    <StyledButton onClick={onClick} background={background} circle={circle}>
-      {children}
-    </StyledButton>
-  );
-};
+export const Button = ({children, background, circle, ...props}) => (
+  <StyledButton background={background} circle={circle} {...props}>
+    {children}
+  </StyledButton>
+);
 
 Button.propTypes = {
   children: PropTypes.element.isRequired,
   background: PropTypes.string,
   circle: PropTypes.bool,
-  onClick: PropTypes.func,
 };
