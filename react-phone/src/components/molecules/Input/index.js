@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import {getFontSize} from '../../../constants';
 
 const StyledInput = styled.input`
   all: unset;
@@ -12,14 +13,14 @@ const StyledInput = styled.input`
   width: ${({width}) => width || 'unset'};
   text-align: ${({centered}) => centered ? 'center' : 'unset'};
   text-transform: ${({uppercase}) => uppercase ? 'uppercase' : 'unset'};
-  font-size: ${({fontSize}) => fontSize || '1em'};
+  font-size: ${({size}) => getFontSize(size)};
 `;
 
 export const Input = ({
   centered,
   uppercase,
   width,
-  fontSize,
+  size,
   ...props
 }) => (
   <StyledInput
@@ -27,7 +28,7 @@ export const Input = ({
     centered={centered}
     uppercase={uppercase}
     width={width}
-    fontSize={fontSize}
+    size={size}
     {...props}
   />
 );
@@ -36,5 +37,5 @@ Input.propTypes = {
   centered: PropTypes.bool,
   uppercase: PropTypes.bool,
   width: PropTypes.string,
-  fontSize: PropTypes.string,
+  size: PropTypes.string,
 };

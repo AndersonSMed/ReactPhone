@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {Button} from '../../molecules/Button';
 import {Icon} from '../../molecules/Icon';
+import {Text} from '../../molecules/Text';
 
 const Row = styled.div`
   width: 100%;
@@ -13,35 +14,57 @@ const Row = styled.div`
 `;
 
 const Container = styled.div`
-  font-size: ${({fontSize}) => fontSize || '1em'};
-
   & > ${Row}:not(:last-child) {
     margin-bottom: ${({spacing}) => spacing || 'unset'};
   };
 `;
 
-export const Dialpad = ({fontSize, spacing}) => {
+export const Dialpad = ({size, spacing}) => {
   return (
-    <Container fontSize={fontSize} spacing={spacing}>
+    <Container spacing={spacing}>
       <Row>
-        <Button circle>1</Button>
-        <Button circle>2</Button>
-        <Button circle>3</Button>
+        <Button circle>
+          <Text size={size}>1</Text>
+        </Button>
+        <Button circle>
+          <Text size={size}>2</Text>
+        </Button>
+        <Button circle>
+          <Text size={size}>3</Text>
+        </Button>
       </Row>
       <Row>
-        <Button circle>4</Button>
-        <Button circle>5</Button>
-        <Button circle>6</Button>
+        <Button circle>
+          <Text size={size}>4</Text>
+        </Button>
+        <Button circle>
+          <Text size={size}>5</Text>
+        </Button>
+        <Button circle>
+          <Text size={size}>6</Text>
+        </Button>
       </Row>
       <Row>
-        <Button circle>7</Button>
-        <Button circle>8</Button>
-        <Button circle>9</Button>
+        <Button circle>
+          <Text size={size}>7</Text>
+        </Button>
+        <Button circle>
+          <Text size={size}>8</Text>
+        </Button>
+        <Button circle>
+          <Text size={size}>9</Text>
+        </Button>
       </Row>
       <Row>
-        <Button circle>*</Button>
-        <Button circle>0</Button>
-        <Button circle>#</Button>
+        <Button circle>
+          <Text size={size}>*</Text>
+        </Button>
+        <Button circle>
+          <Text size={size}>0</Text>
+        </Button>
+        <Button circle>
+          <Text size={size}>#</Text>
+        </Button>
       </Row>
       <Row>
         <Button background="#7acc8f" circle>
@@ -53,6 +76,6 @@ export const Dialpad = ({fontSize, spacing}) => {
 };
 
 Dialpad.propTypes = {
-  fontSize: PropTypes.string,
+  size: PropTypes.string,
   spacing: PropTypes.string,
 };
