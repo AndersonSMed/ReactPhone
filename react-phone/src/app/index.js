@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Dialer} from '../pages/Dialer';
+import {OnCall} from '../pages/OnCall';
 import './index.css';
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
 
 const App = () => (
   <Container>
-    <Dialer />
+    <OnCall />
   </Container>
 );
 

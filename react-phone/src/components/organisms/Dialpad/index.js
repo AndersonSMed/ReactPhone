@@ -9,7 +9,6 @@ const Row = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding: 4px 12px;
   box-sizing: border-box;
 `;
 
