@@ -12,6 +12,6 @@ export const Dialer = () => (
   <Container>
     <Input size="md" width="100%" centered uppercase />
     <Divider />
-    <Dialpad size="md" spacing="8px" />
+    <Dialpad size="md" />
   </Container>
 );

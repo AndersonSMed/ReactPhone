@@ -4,10 +4,11 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   all: unset;
-  min-width: 64px;
-  min-height: 64px;
-  color: #424242;
-  background: ${({background}) => background ? background : '#e0e0e0'};
+  padding: 16px;
+  box-sizing: border-box;
+  color: ${({theme}) => theme.colors.black};
+  background: ${({background, theme}) =>
+    theme.colors[background] || theme.colors.foreground};
   border-radius: ${({circle}) => circle ? '50%' : '2px'};
   cursor: pointer;
   display: flex;

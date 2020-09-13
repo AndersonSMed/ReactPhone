@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import MaterialIcon from '@mdi/react';
 
 const StyledIcon = styled(MaterialIcon)`
-  color: ${({color}) => color ? color : 'unset' };
+  color: ${({color, theme}) => theme.colors[color] || 'unset' };
 `;
 
 const getIconPath = (iconName) => {
